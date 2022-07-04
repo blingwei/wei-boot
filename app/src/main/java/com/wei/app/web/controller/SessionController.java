@@ -3,8 +3,8 @@ package com.wei.app.web.controller;
 import com.wei.core.domain.bo.SessionMessage;
 import com.wei.core.domain.query.SessionMessageQuery;
 import com.wei.core.domain.service.ISessionMessageDomainService;
-import com.wei.starter.core.push.PushService;
-import com.wei.starter.core.push.bo.Message;
+//import com.wei.starter.core.push.PushService;
+//import com.wei.starter.core.push.bo.Message;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,9 +21,9 @@ public class SessionController {
 
     @Resource
     private ISessionMessageDomainService sessionMessageDomainService;
-
-    @Resource
-    private PushService pushService;
+//
+//    @Resource
+//    private PushService pushService;
 
     @Value("${env:dev}")
     private String env;
@@ -38,12 +38,12 @@ public class SessionController {
         return env;
     }
 
-    @GetMapping("send")
-    public void sendMessage(@RequestParam("userId") String userId, @RequestParam("dest") String dest, @RequestParam("content") String content){
-        Message message = new Message();
-        message.setContent(content);
-        message.setSeq(UUID.randomUUID().toString());
-        pushService.sendToUser(userId, dest, message);
-    }
+//    @GetMapping("send")
+//    public void sendMessage(@RequestParam("userId") String userId, @RequestParam("dest") String dest, @RequestParam("content") String content){
+//        Message message = new Message();
+//        message.setContent(content);
+//        message.setSeq(UUID.randomUUID().toString());
+//        pushService.sendToUser(userId, dest, message);
+//    }
 
 }

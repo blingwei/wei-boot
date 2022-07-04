@@ -1,5 +1,7 @@
 package com.wei.app;
 
+import com.github.xiaoymin.knife4j.spring.annotations.EnableKnife4j;
+//import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
